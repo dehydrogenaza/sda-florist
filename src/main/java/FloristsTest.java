@@ -2,6 +2,34 @@ import containers.Box;
 import containers.ShoppingCart;
 import flowers.*;
 
+// UWAGA: Podany kod (z wyjątkiem implementacji metody valueOf) to kod testowy podany w treści zadania przez
+// prowadzącego.
+//
+// Spodziewany output na konsoli:
+//
+//        Przed płaceniem Wózek własciciel Janek
+//        róża, kolor: czerwony, ilość 5, cena 10.0
+//        piwonia, kolor: czerwony, ilość 5, cena 8.0
+//        frezja, kolor: żółty, ilość 3, cena -1.0
+//        bez, kolor: biały, ilość 3, cena 12.0
+//        Po zapłaceniu Wózek własciciel Janek
+//        róża, kolor: czerwony, ilość 5, cena 10.0
+//        piwonia, kolor: czerwony, ilość 5, cena 8.0
+//        bez, kolor: biały, ilość 3, cena 12.0
+//        Jankowi zostało : 74.0 zł
+//        Po zapakowaniu do pudełka Wózek własciciel Janek -- pusto
+//        Pudełko własciciel Janek
+//        róża, kolor: czerwony, ilość 5, cena 10.0
+//        piwonia, kolor: czerwony, ilość 5, cena 8.0
+//        bez, kolor: biały, ilość 3, cena 12.0
+//        Czerwone kwiaty w pudełku Janka kosztowały: 90
+//        Wózek własciciel Stefan
+//        bez, kolor: biały, ilość 3, cena 12.0
+//        róża, kolor: czerwony, ilość 5, cena 10.0
+//        Pudełko własciciel Stefan
+//        bez, kolor: biały, ilość 3, cena 12.0
+//        Stefanowi zostało : 24.0 zł
+
 public class FloristsTest {
     // definicja metody sumowania wartosci kwiatów o podanym kolorze
     static int valueOf(Box box, String color) {
